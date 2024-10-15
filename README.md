@@ -2,9 +2,9 @@
 
 ---
 
-[IMG_0535](https://github.com/user-attachments/assets/98041793-4b84-4f50-a4e6-5e53ade32ff4)
+![Banner](https://github.com/user-attachments/assets/98041793-4b84-4f50-a4e6-5e53ade32ff4)
 
----
+---   
 
 ### Hey!
 
