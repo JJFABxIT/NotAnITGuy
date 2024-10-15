@@ -2,7 +2,7 @@
 
 ---
 
-![Dell_Rack-Resized-for-github](https://github.com/user-attachments/assets/9cd5b418-fe2b-4adf-8324-acad10d3b499)
+![Dell_Rack-Resized-for-github2](https://github.com/user-attachments/assets/cbec86fc-638c-4e8f-bf18-43f3c686e95c)
 
 ---   
 
