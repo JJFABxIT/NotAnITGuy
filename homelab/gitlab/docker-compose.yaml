@@ -1,0 +1,31 @@
+---
+
+services:
+
+### Gitlab
+
+  gitlab:
+    image: gitlab/gitlab-ce:17.4.2-ce.0
+    container_name: gitlab
+    hostname: gitlab.example.com
+    ports:
+      - '8222:22'
+    volumes:
+      - ./config:/etc/gitlab
+      - ./logs:/var/log/gitlab
+      - ./data:/var/opt/gitlab
+    shm_size: '256m'
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.gitlab-prod-1-https.rule=Host(`gitlab.example.com`)
+      - traefik.http.routers.gitlab-prod-1-https.entrypoints=https
+      - traefik.http.routers.gitlab-prod-1-https.tls=true
+      - traefik.http.routers.gitlab-prod-1-https.tls.certresolver=cloudflare
+      - traefik.http.services.gitlab-prod-1-service.loadbalancer.server.port=80
+    networks:
+      - proxy
+    restart: unless-stopped
+
+networks:
+  proxy:
+    external: true
