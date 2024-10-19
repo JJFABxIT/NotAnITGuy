@@ -24,10 +24,13 @@
 
 In this repository, you will find documentation and resources related to:
 
-**Virtualization**: Proxmox, VMs, and related tools
-**Containerization**: Docker, Kubernetes, and other container platforms
-**Self-hosting**: Running your own services and applications from home
-**Cybersecurity**: Best practices for securing your home lab and self-hosted services
+- **Virtualization**: Proxmox, VMs, and related tools
+
+- **Containerization**: Docker, Kubernetes, and other container platforms
+
+- **Self-hosting**: Running your own services and applications from home
+
+- **Cybersecurity**: Best practices for securing your home lab and self-hosted services
 
 ---
 
