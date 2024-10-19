@@ -6,12 +6,12 @@
 
 ---   
 
-**Welcome to the official repository of NotanITguy**, your hub for all things related to virtualization, containerization, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos i will uploading on my YouTube channel.
+**Welcome to the official repository of NotanITguy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos i will uploading on my YouTube channel.
 
 #### Background
 
  **I'm Jake, a self taught IT enthusiast!** I have a unique perspective of IT due to my background as a mechanical engineer. Through my 
- Youtube channel, i'm sharing videos and tutorials on a variety of technologues such as networking, containerisation and virtualisation as well
+ Youtube channel, i'm sharing videos and tutorials on a variety of technologies such as networking, containerisation and virtualisation as well
  as general cyber security. With no formal education in IT (i'm currently embarking on my first degree!) i know how scary some of these 
  technologies and terminoligies are, but together we can walk through all the required steps to get you self hosting your own media sever, 
  DNS server as well as a whole suite of docker containers in no time! 
@@ -24,9 +24,9 @@
 
 In this repository, you will find documentation and resources related to:
 
-- **Virtualization**: Proxmox, VMs, and related tools
+- **Virtualisation**: Proxmox, VMs, and related tools
 
-- **Containerization**: Docker, Kubernetes, and other container platforms
+- **Containerisation**: Docker, Kubernetes, and other container platforms
 
 - **Self-hosting**: Running your own services and applications from home
 
