@@ -80,19 +80,19 @@ cd NotAnITGuy
 
 Each project in this repository is linked to a **specific video (or video series)** on my channel. Below are links to some of the core playlists:
 
-1. **Getting Started with Proxmox**
+1. [**Getting Started with Proxmox**](https://github.com/JJFABxIT/NotAnITGuy/tree/main/videoSeries/01.GettingStartedwithPromox)
 
 Learn how to install and configure Proxmox, create VMs, and manage your home lab.
 
-2. **Docker for Beginners**
+2. **Docker for Beginners** - Coming Soon!
 
 A beginner-friendly series on how to set up Docker and run your first containers.
 
-3. **Self-Hosting Essentials**
+3. **Self-Hosting Essentials** - Coming Soon!
 
 Host your own applications, like websites, VPNs, and cloud storage.
 
-4. **Cybersecurity Basics**
+4. **Cybersecurity Basics** - Coming Soon!
 
 How to secure your home lab, set up firewalls, and ensure your self-hosted services are safe.
 
