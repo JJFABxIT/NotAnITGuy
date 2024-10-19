@@ -1,4 +1,4 @@
-### NotanITguy's Tech Lab 🖥️
+### NotanITGuy's Tech Lab 🖥️
 
 ---
 
@@ -6,7 +6,7 @@
 
 ---   
 
-**Welcome to the official repository of NotanITguy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos i will uploading on my YouTube channel.
+**Welcome to the official repository of NotanITGuy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos i will uploading on my YouTube channel.
 
 #### Background
 
