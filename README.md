@@ -162,18 +162,20 @@ This repository is licensed under the MIT License. You are free to use, modify, 
 
 If you have any questions or suggestions, feel free to reach out:
 
-YouTube: NotanITguy
-Twitter: @JJFABxIT
+YouTube: [NotanITguy](https://www.youtube.com/@NotAnITGuy)
+Twitter: [@JJFABxIT](https://x.com/JJFABxIT)
 
 Thank you for visiting the repository and supporting the channel! Let's build something awesome together.
 
 ---
 
-Note:
-This repository is constantly being updated with new content, so check back regularly for new projects, files, and tutorials!
+>[!NOTE]
+>This repository is constantly being updated with new content, so check back regularly for new projects, files, and tutorials!
 
 ---
 
-Happy self-hosting!
+#### **Happy self-hosting!**
 
 ---
+
+[Back to top](#top) [:arrow_up:](#top)
