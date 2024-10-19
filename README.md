@@ -1,4 +1,4 @@
-### NotanITGuy's Tech Lab 🖥️
+# NotanITGuy's Tech Lab 🖥️
 
 ---
 
