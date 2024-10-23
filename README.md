@@ -6,14 +6,14 @@
 
 ---   
 
-**Welcome to the official repository of NotanITGuy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos i will uploading on my YouTube channel.
+**Welcome to the official repository of NotanITGuy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos I will be uploading to my YouTube channel.
 
 #### Background
 
  **I'm Jake, a self taught IT enthusiast!** I have a unique perspective of IT due to my background as a mechanical engineer. Through my 
- Youtube channel, i'm sharing videos and tutorials on a variety of technologies such as networking, containerisation and virtualisation as well
- as general cyber security. With no formal education in IT (i'm currently embarking on my first degree!) i know how scary some of these 
- technologies and terminoligies are, but together we can walk through all the required steps to get you self hosting your own media sever, 
+ Youtube channel, I'm sharing videos and tutorials on a variety of technologies such as networking, containerisation and virtualisation as well
+ as general cyber security. With no formal education in IT (I'm currently embarking on my first degree!), I know how scary some of these 
+ technologies and terminologies are, but together we can walk through all the required steps to get you self hosting your own media sever, 
  DNS server as well as a whole suite of docker containers in no time! 
  
  Whether you are just an overly curious individual like myself or an IT professional, join me on my journey into the world of IT
@@ -116,7 +116,7 @@ Learn how to install Proxmox on a bare-metal server and manage VMs for various a
 
 Files: /videoSeries.02.DockerforBeginners
 
-For more projects, please bare with me as i upload more however you are free browse through the folders in this repo or check out the Project List.
+For more projects, please bare with me as I upload more however you are free to browse through the folders in this repo or check out the Project List.
 
 ---
 
