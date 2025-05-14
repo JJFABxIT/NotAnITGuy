@@ -16,14 +16,14 @@ This project demonstrates how I securely expose [Jellyfin](https://jellyfin.org)
 
 ![Architecture Diagram](docs/architecture-diagram.png)
 
-| Component     | Role                              |\n
-|---------------|-----------------------------------|\n
-| Jellyfin      | Media server                      |\n
-| Traefik v3    | Reverse proxy + HTTPS termination |\n
-| Cloudflared   | Secure tunnel to Cloudflare       |\n
-| Docker        | Container orchestration           |\n
-| Pi-hole       | Internal DNS                      |\n
-| Grafana       | Metrics and observability         |\n
+| Component     | Role                              |
+|---------------|-----------------------------------|
+| Jellyfin      | Media server                      |
+| Traefik v3    | Reverse proxy + HTTPS termination |
+| Cloudflared   | Secure tunnel to Cloudflare       |
+| Docker        | Container orchestration           |
+| Pi-hole       | Internal DNS                      |
+| Grafana       | Metrics and observability         |
 
 ### Flow Summary
 
@@ -37,20 +37,20 @@ This project demonstrates how I securely expose [Jellyfin](https://jellyfin.org)
 
 ## 🛠️ Project Layout
 
-jellyfin-secure/
-├── docker-compose.yml
-├── traefik/
-│ ├── traefik.yml
-│ └── dynamic.yml
-├── cloudflare/
-│ └── config.yml
-├── .env.example
-├── docs/
-│ ├── architecture-diagram.png
-│ └── tunnel-flow.md
-└── screenshots/
-  ├── jellyfin-ui.png
-  ├── grafana-dashboard.png
+jellyfin-secure/ <br>
+├── docker-compose.yml<br>
+├── traefik/<br>
+│ ├── traefik.yml<br>
+│ └── dynamic.yml<br>
+├── cloudflare/<br>
+│ └── config.yml<br>
+├── .env.example<br>
+├── docs/<br>
+│ ├── architecture-diagram.png<br>
+│ └── tunnel-flow.md<br>
+└── screenshots/<br>
+  ├── jellyfin-ui.png<br>
+  ├── grafana-dashboard.png<br>
 
 ---
 
