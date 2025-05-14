@@ -16,14 +16,14 @@ This project demonstrates how I securely expose [Jellyfin](https://jellyfin.org)
 
 ![Architecture Diagram](docs/architecture-diagram.png)
 
-| Component     | Role                              |
-|---------------|-----------------------------------|
-| Jellyfin      | Media server                      |
-| Traefik v3    | Reverse proxy + HTTPS termination |
-| Cloudflared   | Secure tunnel to Cloudflare       |
-| Docker        | Container orchestration           |
-| Pi-hole       | Internal DNS                      |
-| Grafana       | Metrics and observability         |
+| Component     | Role                              |\n
+|---------------|-----------------------------------|\n
+| Jellyfin      | Media server                      |\n
+| Traefik v3    | Reverse proxy + HTTPS termination |\n
+| Cloudflared   | Secure tunnel to Cloudflare       |\n
+| Docker        | Container orchestration           |\n
+| Pi-hole       | Internal DNS                      |\n
+| Grafana       | Metrics and observability         |\n
 
 ### Flow Summary
 
