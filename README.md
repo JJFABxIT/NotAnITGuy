@@ -6,13 +6,12 @@
 
 ---   
 
-**Welcome to the official repository of NotanITGuy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides that complement the videos I will be uploading to my YouTube channel.
+**Welcome to the official repository of NotanITGuy**, your hub for all things related to virtualisation, containerisation, self-hosting, and cybersecurity! Whether you’re a beginner or a seasoned IT enthusiast, this repository contains resources, configuration files, and detailed guides.
 
 #### Background
 
  **I'm Jake, a self taught IT enthusiast!** I have a unique perspective of IT due to my background as a mechanical engineer. Through my 
- Youtube channel, I'm sharing videos and tutorials on a variety of technologies such as networking, containerisation and virtualisation as well
- as general cyber security. With no formal education in IT (I'm currently embarking on my first degree!), I know how scary some of these 
+ Github profile, I'm sharing my configurations and guides on a variety of technologies such as networking, containerisation and virtualisation as well as general cyber security. With no formal education in IT (I'm currently embarking on my first degree!), I know how scary some of these 
  technologies and terminologies are, but together we can walk through all the required steps to get you self hosting your own media sever, 
  DNS server as well as a whole suite of docker containers in no time! 
  
@@ -37,7 +36,7 @@ In this repository, you will find documentation and resources related to:
 ## 📚 Table of Contents
 
 - Getting Started
-- Video Series
+- Guides
 - Projects
 - How to Contribute
 - License
@@ -46,7 +45,7 @@ In this repository, you will find documentation and resources related to:
 
 ## 🏁 Getting Started
 
-This repository is meant to supplement the tutorials on my YouTube channel. Before diving in, you may want to check out the relevant videos for each section of the repository.
+This repository is meant to supplement the tutorials on my Blog and act as a knowledge base. Before diving in, you may want to check out the relevant blog post for each section of the repository.
 
 ### Requirements
 
@@ -76,11 +75,10 @@ cd NotAnITGuy
 
 ---
 
-## 📺 Video Series
+## 📺 Guides
+Each project in this repository is linked to a **specific blog post (or series)**. Below are links to some of the core playlists:
 
-Each project in this repository is linked to a **specific video (or video series)** on my channel. Below are links to some of the core playlists:
-
-1. [**Getting Started with Proxmox**](https://github.com/JJFABxIT/NotAnITGuy/tree/main/videoSeries/01.GettingStartedwithPromox)
+1. [**Getting Started with Proxmox**](https://github.com/JJFABxIT/NotAnITGuy/tree/main/guides/01.GettingStartedwithPromox)
 
 Learn how to install and configure Proxmox, create VMs, and manage your home lab.
 
@@ -92,29 +90,25 @@ A beginner-friendly series on how to set up Docker and run your first containers
 
 Host your own applications, like websites, VPNs, and cloud storage.
 
-4. **Cybersecurity Basics** - Coming Soon!
+4. **Jellyfin Traefik and CLoudflared** - Coming Soon!
 
-How to secure your home lab, set up firewalls, and ensure your self-hosted services are safe.
+How to securely expose a media server behind traefik using a cloudflare tunnel.
 
 ---
 
 ## 🚀 Projects
 
-Below is a list of projects and guides, with links to the relevant YouTube tutorials and setup instructions:
+Below is a list of projects and guides, with links to the relevant tutorials and setup instructions:
 
 1. Proxmox Home Lab Setup
 
-**Tutorial Video** - Coming Soon!
+Files: /guides/01.GettingStartedwthProxmox
 
-Files: /videoSeries/01.GettingStartedwthProxmox
-
-Learn how to install Proxmox on a bare-metal server and manage VMs for various applications. (COMING SOON!)
+Learn how to install Proxmox on a bare-metal server and manage VMs for various applications.
 
 2. Docker Compose Stack
 
-**Tutorial Video** - Coming Soon!
-
-Files: /videoSeries.02.DockerforBeginners
+Files: /guides.02.DockerforBeginners
 
 For more projects, please bare with me as I upload more however you are free to browse through the folders in this repo or check out the Project List.
 
@@ -165,12 +159,12 @@ If you have any questions or suggestions, feel free to reach out:
 YouTube: [NotanITguy](https://www.youtube.com/@NotAnITGuy)
 Twitter: [@JJFABxIT](https://x.com/JJFABxIT)
 
-Thank you for visiting the repository and supporting the channel! Let's build something awesome together.
+Thank you for visiting the repository! Let's build something awesome together.
 
 ---
 
 >[!NOTE]
->This repository is constantly being updated with new content, so check back regularly for new projects, files, and tutorials!
+>This repository is regularly being updated with new content, so check back soon for new projects, files, and tutorials!
 
 ---
 

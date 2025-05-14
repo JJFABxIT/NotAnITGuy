@@ -1,0 +1,128 @@
+services:
+
+## Jellyfin
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    user: 1000:1000
+    #group_add:
+    #  - '109'  # This needs to be the group id of running `stat -c '%g' /dev/dri/renderD128` on the docker host
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - ./YOUR_NAS/Films:/Films:ro
+      - ./YOUR_NAS/TVShows:/TVShows:ro
+      - ./YOUR_NAS/Audiobooks:/Audiobooks:ro
+      - ./YOUR_NAS/Music:/Music:ro
+    #ports: You will need to uncomment if you aren't running through a proxy
+    #  - 8096:8096
+    #  - 8920:8920 #optional
+    #  - 7359:7359/udp #optional
+    #  - 1900:1900/udp #optional
+    #devices: uncomment these and amend if you require GPU accelerated transcoding
+    #  - /dev/dri/renderD128:/dev/dri/renderD128
+    #  - /dev/dri/card0:/dev/dri/card0
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jellyfin.entrypoints=http"
+      - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.example.com`)"
+      - "traefik.http.middlewares.jellyfin-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.jellyfin.middlewares=jellyfin-https-redirect"
+      - "traefik.http.routers.jellyfin-secure.entrypoints=https"
+      - "traefik.http.routers.jellyfin-secure.rule=Host(`jellyfin.example.com`)"
+      - "traefik.http.routers.jellyfin-secure.tls=true"
+      - "traefik.http.routers.jellyfin-secure.service=jellyfin"
+      - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
+      - "traefik.docker.network=proxy"
+    networks:
+      proxy:
+    security_opt:
+      - no-new-privileges:true
+
+## Traefik 
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+    ports:
+      - 80:80
+      - 443:443
+      - 8082:8082
+    environment:
+      CF_DNS_API_TOKEN_FILE: /run/secrets/cf_api_token # note, using _FILE for docker secrets
+      # CF_DNS_API_TOKEN: ${CF_DNS_API_TOKEN} # if using .env
+      # If you choose to use an API Key instead of a Token, specify your email as well
+      # - CF_API_EMAIL=user@example.com
+      # - CF_API_KEY=YOUR_API_KEY
+      TRAEFIK_DASHBOARD_CREDENTIALS: ${TRAEFIK_DASHBOARD_CREDENTIALS}
+    secrets:
+      - cf_api_token
+    env_file: .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /home/keystone/docker/traef/data/traefik.yml:/traefik.yml:ro
+      - /home/keystone/docker/traef/data/acme.json:/acme.json
+      - /home/keystone/docker/traef/data/config.yml:/config.yml:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.entrypoints=http"
+      - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.example.com`)" 
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=admin:SuperSecret"
+      - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
+      - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
+      - "traefik.http.routers.traefik-secure.entrypoints=https"
+      - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.example.com`)"
+      - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
+      - "traefik.http.routers.traefik-secure.tls=true"
+      - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
+      - "traefik.http.routers.traefik-secure.tls.domains[0].main=example.com"
+      - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.example.com"
+      - "traefik.http.routers.traefik-secure.service=api@internal"
+
+secrets:
+  cf_api_token:
+    file: ./cf_api_token.txt
+
+## Grafana 
+  grafana:
+    image: grafana/grafana-oss:11.0.0
+    container_name: grafana
+    volumes:
+      - ./contents:/var/lib/grafana
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.grafana-prod-1-http.entrypoints=http
+      - traefik.http.routers.grafana-prod-1-http.rule=Host(`grafana.example.com`)
+      - traefik.http.routers.grafana-prod-1-https.entrypoints=https
+      - traefik.http.routers.grafana-prod-1-https.rule=Host(`grafana.example.com`)
+      - traefik.http.routers.grafana-prod-1-https.tls=true
+      - traefik.http.routers.grafana-prod-1-https.tls.certresolver=cloudflare
+      - traefik.http.services.grafana-prod-1.loadbalancer.server.port=3000
+
+    networks:
+      - proxy
+    restart: unless-stopped
+
+## Cloudflared
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token {TUNNEL_ID}
+    env_file: .env
+    restart: unless-stopped
+    container_name: tunnel
+    network_mode: host
+    volumes:
+      - ~/docker/tunnl/data:/etc/cloudflared
+
+networks:
+  proxy:
+    external: true
