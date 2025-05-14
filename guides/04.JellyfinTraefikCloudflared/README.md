@@ -3,9 +3,7 @@
 ![Docker Compose](https://img.shields.io/badge/deploy-Docker_Compose-blue?logo=docker)
 ![Traefik v3](https://img.shields.io/badge/reverse_proxy-Traefik_v3-orange?logo=traefikproxy)
 ![Cloudflare Tunnel](https://img.shields.io/badge/secure_access-Cloudflare_Tunnel-lightgrey?logo=cloudflare)
-![MIT License](https://img.shields.io/github/license/JJFABxIT/jellyfin-secure-deploy)
-![Last Commit](https://img.shields.io/github/last-commit/JJFABxIT/jellyfin-secure-deploy)
-
+![Last Commit](https://img.shields.io/github/last-commit/JJFABxIT/NotAnITGuy/guides/homelab/docker/jellyfin)
 
 This project demonstrates how I securely expose [Jellyfin](https://jellyfin.org) to the internet using:
 
